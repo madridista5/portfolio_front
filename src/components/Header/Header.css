@@ -1,0 +1,10 @@
+.app__header {
+    height: 100vh;
+    position: relative;
+}
+
+.app__header video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
