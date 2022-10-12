@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react";
 
 import './Header.css';
+import {Navbar} from "../Navbar/Navbar";
 
 export const Header = () => {
     let vidRef = useRef<HTMLVideoElement | null>(null);
@@ -19,6 +20,7 @@ export const Header = () => {
                 muted
                 className="video-js"
             />
+            <Navbar/>
         </div>
     );
 }
