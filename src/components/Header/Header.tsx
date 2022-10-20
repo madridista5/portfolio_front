@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
+import {Navbar} from "../Navbar/Navbar";
 
 import './Header.css';
-import {Navbar} from "../Navbar/Navbar";
 
 export const Header = () => {
     let vidRef = useRef<HTMLVideoElement | null>(null);
