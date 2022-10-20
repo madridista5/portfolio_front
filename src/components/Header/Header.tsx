@@ -1,7 +1,8 @@
 import React, {useEffect, useRef} from "react";
+import {Navbar} from "../Navbar/Navbar";
+import {Title} from "../Title/Title";
 
 import './Header.css';
-import {Navbar} from "../Navbar/Navbar";
 
 export const Header = () => {
     let vidRef = useRef<HTMLVideoElement | null>(null);
@@ -13,7 +14,7 @@ export const Header = () => {
     return (
         <div className="app__header">
             <video
-                src={require('../../assets/vid3.mp4')}
+                src={require('../../assets/vid1.mp4')}
                 ref={vidRef}
                 loop
                 controls={false}
@@ -21,6 +22,7 @@ export const Header = () => {
                 className="video-js"
             />
             <Navbar/>
+            <Title/>
         </div>
     );
 }

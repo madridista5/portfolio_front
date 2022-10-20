@@ -9,7 +9,6 @@
     display: flex;
     margin: 2rem auto;
     padding-right: 4rem;
-    max-width: 1280px;
     justify-content: flex-end;
     list-style: none;
 }
