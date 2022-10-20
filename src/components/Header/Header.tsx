@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import {Navbar} from "../Navbar/Navbar";
+import {Title} from "../Title/Title";
 
 import './Header.css';
 
@@ -21,6 +22,7 @@ export const Header = () => {
                 className="video-js"
             />
             <Navbar/>
+            <Title/>
         </div>
     );
 }
