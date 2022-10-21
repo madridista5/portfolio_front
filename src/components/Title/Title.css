@@ -32,3 +32,29 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 1150px) {
+    .app__title {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .app__title {
+        width: 70%;
+    }
+    .app__tilte-info {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+}
+
+@media screen and (max-width: 450px) {
+    .app__title {
+        width: 80%;
+    }
+}
