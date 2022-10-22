@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import {Navbar} from "../Navbar/Navbar";
 import {Title} from "../Title/Title";
+import {Arrow} from "../Arrow/Arrow";
 
 import './Header.css';
 
@@ -23,6 +24,7 @@ export const Header = () => {
             />
             <Navbar/>
             <Title/>
+            <Arrow/>
         </div>
     );
 }
