@@ -14,6 +14,7 @@ export const Header = () => {
 
     return (
         <div className="app__header">
+            <div className="app__header-dark-theme"/>
             <video
                 src={require('../../assets/vid1.mp4')}
                 ref={vidRef}
