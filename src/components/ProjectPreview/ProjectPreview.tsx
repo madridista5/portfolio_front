@@ -14,8 +14,8 @@ export const ProjectPreview = ({link, img}: Props) => (
             <div className="projectPreview__browser-circle"/>
             <div className="projectPreview__browser-circle"/>
         </div>
-        <a href={link}>
-            <img src={img} alt="photo" className="projectPreview__img"/>
+        <a href={link} target="_blank">
+            <img src={String(img)} alt="photo" className="projectPreview__img"/>
         </a>
     </div>
 )
