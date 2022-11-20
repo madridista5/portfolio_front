@@ -1,13 +1,18 @@
 import React, {SyntheticEvent, useRef} from "react";
 import {AiOutlineMail, AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
+import emailjs from '@emailjs/browser';
 
 import './Contact.css';
 
 export const Contact = () => {
-    const formRef = useRef<HTMLFormElement | null>(null);
+    const formRef = useRef<HTMLFormElement>(null);
 
     const handleSubmit = async (e: SyntheticEvent) => {
         e.preventDefault();
+
+        if (formRef.current !== null) {
+            await emailjs.sendForm('service_rerzhqg', 'template_2jsor1r', formRef.current, '46vfu3V_dXSjCUxR7');
+        }
     };
 
     return (
