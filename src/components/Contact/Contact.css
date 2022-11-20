@@ -30,6 +30,7 @@
     margin: 3rem 0;
     font-weight: 300;
     font-size: 1.3rem;
+    color: var(--color-dark-blue);
 }
 
 .contact__left-side_info a {
@@ -70,4 +71,23 @@ button {
     color: var(--color-light-beige);
     font-weight: 500;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+    input {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+    }
+
+    .contact__right-side form {
+        text-align: center;
+    }
 }

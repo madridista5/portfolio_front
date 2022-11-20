@@ -1,10 +1,14 @@
-import React, {useRef} from "react";
+import React, {SyntheticEvent, useRef} from "react";
 import {AiOutlineMail, AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
 
 import './Contact.css';
 
 export const Contact = () => {
     const formRef = useRef<HTMLFormElement | null>(null);
+
+    const handleSubmit = async (e: SyntheticEvent) => {
+        e.preventDefault();
+    };
 
     return (
         <div className="contact" id="contact">
@@ -24,7 +28,7 @@ export const Contact = () => {
                 </div>
             </div>
             <div className="contact__right-side">
-                <form ref={formRef}>
+                <form ref={formRef} onSubmit={handleSubmit}>
                     <input type="text" placeholder="Imię" name="user_name"/>
                     <input type="text" placeholder="Temat" name="user_subject"/>
                     <input type="text" placeholder="Email" name="user_email"/>
