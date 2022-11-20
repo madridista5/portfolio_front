@@ -1,6 +1,7 @@
 import React from 'react';
 import {Header} from "./components/Header/Header";
 import {ProjectsPreview} from "./components/ProjectsPreview/ProjectsPreview";
+import {Contact} from "./components/Contact/Contact";
 
 import './App.css';
 
@@ -9,6 +10,7 @@ export const App = () => {
         <>
             <Header/>
             <ProjectsPreview/>
+            <Contact/>
         </>
     );
 }

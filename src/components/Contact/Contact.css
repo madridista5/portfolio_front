@@ -1,0 +1,73 @@
+.contact {
+    height: 100vh;
+    background-color: var(--color-light-beige);
+    display: flex;
+    padding: 5rem;
+}
+
+.contact__left-side {
+    flex: 1;
+    margin: auto 0;
+}
+
+.contact__right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__left-side_title {
+    color: var(--color-dark-red);
+    font-size: 4rem;
+    width: 80%;
+}
+
+.contact__left-side_info {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.contact__left-side_info a {
+    display: flex;
+    align-items: center;
+    color: var(--color-dark-blue);
+}
+
+.contact__left-side_info-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+}
+
+input {
+    width: 51%;
+    background-color: var(--color-light-beige);
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 14px;
+    padding-left: 10px;
+    background-color: var(--color-light-beige);
+}
+
+button {
+    border: none;
+    padding: 15px;
+    background-color: var(--color-dark-red);
+    color: var(--color-light-beige);
+    font-weight: 500;
+    cursor: pointer;
+}
