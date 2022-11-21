@@ -45,7 +45,7 @@ export const Contact = () => {
                         name="message"
                     />
                     {isSent && <p style={{color: 'var(--color-dark-red)', marginBottom: '1rem'}}>Twoja wiadomość została wysłana.</p>}
-                    <button type="submit" value="Send">Wyślij</button>
+                    <button type="submit" value="Send" className="contact__right-side__btn">Wyślij</button>
                 </form>
             </div>
         </div>

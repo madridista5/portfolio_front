@@ -1,0 +1,30 @@
+.toggle {
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid var(--color-dark-red);
+    background-color: white;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toggle__img {
+    width: 15px;
+    height: 15px;
+}
+
+.toggle__btn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: var(--color-dark-red);
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    border: none;
+}
