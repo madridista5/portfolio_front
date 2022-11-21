@@ -30,6 +30,7 @@
     margin: 3rem 0;
     font-weight: 300;
     font-size: 1.3rem;
+    color: var(--color-dark-blue);
 }
 
 .contact__left-side_info a {
@@ -45,7 +46,7 @@
 }
 
 input {
-    width: 51%;
+    width: 65%;
     background-color: var(--color-light-beige);
     height: 3rem;
     border: none;
@@ -70,4 +71,42 @@ button {
     color: var(--color-light-beige);
     font-weight: 500;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+    input {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact__right-side {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact__left-side_title {
+        font-size: 2rem;
+    }
+
+    .contact__left-side_info {
+        margin: 1.5rem 0;
+        font-size: 1.1rem;
+    }
+    input {
+        width: 80%;
+        height: 2rem;
+        font-size: 1.3rem;
+    }
+
+    textarea {
+        font-size: 1.3rem;
+    }
 }

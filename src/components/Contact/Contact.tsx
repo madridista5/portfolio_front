@@ -1,10 +1,21 @@
-import React, {useRef} from "react";
+import React, {SyntheticEvent, useRef, useState} from "react";
 import {AiOutlineMail, AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
+import emailjs from '@emailjs/browser';
 
 import './Contact.css';
 
 export const Contact = () => {
-    const formRef = useRef<HTMLFormElement | null>(null);
+    const formRef = useRef<HTMLFormElement>(null);
+    const [isSent, setIsSent] = useState<boolean>(false);
+
+    const handleSubmit = async (e: SyntheticEvent) => {
+        e.preventDefault();
+
+        if (formRef.current !== null) {
+            await emailjs.sendForm('service_rerzhqg', 'template_2jsor1r', formRef.current, '46vfu3V_dXSjCUxR7');
+            setIsSent(true);
+        }
+    };
 
     return (
         <div className="contact" id="contact">
@@ -24,7 +35,7 @@ export const Contact = () => {
                 </div>
             </div>
             <div className="contact__right-side">
-                <form ref={formRef}>
+                <form ref={formRef} onSubmit={handleSubmit}>
                     <input type="text" placeholder="Imię" name="user_name"/>
                     <input type="text" placeholder="Temat" name="user_subject"/>
                     <input type="text" placeholder="Email" name="user_email"/>
@@ -33,6 +44,7 @@ export const Contact = () => {
                         placeholder="Wiadomość"
                         name="message"
                     />
+                    {isSent && <p style={{color: 'var(--color-dark-red)', marginBottom: '1rem'}}>Twoja wiadomość została wysłana.</p>}
                     <button type="submit" value="Send">Wyślij</button>
                 </form>
             </div>
