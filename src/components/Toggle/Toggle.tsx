@@ -5,6 +5,7 @@ import Sun from '../../assets/sun.png';
 import './Toggle.css';
 
 export const Toggle = () => {
+
     return (
         <div className="toggle">
             <img src={Sun} alt="sun" className="toggle__img"/>
