@@ -64,7 +64,7 @@ textarea {
     background-color: var(--color-light-beige);
 }
 
-button {
+.contact__right-side__btn {
     border: none;
     padding: 15px;
     background-color: var(--color-dark-red);
