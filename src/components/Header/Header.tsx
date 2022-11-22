@@ -1,12 +1,14 @@
-import React, {useEffect, useRef} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import {Navbar} from "../Navbar/Navbar";
 import {Title} from "../Title/Title";
 import {Arrow} from "../Arrow/Arrow";
+import {ThemeContext} from "../../context/themeContext";
 
 import './Header.css';
 
 export const Header = () => {
     let vidRef = useRef<HTMLVideoElement | null>(null);
+    const {darkMode} = useContext(ThemeContext);
 
     useEffect(() => {
         vidRef.current?.play();
@@ -14,7 +16,7 @@ export const Header = () => {
 
     return (
         <div className="app__header">
-            <div className="app__header-dark-theme"/>
+            <div className="app__header-dark-theme" style={{display: darkMode ? 'block' : 'none'}}/>
             <video
                 src={require('../../assets/vid1.mp4')}
                 ref={vidRef}
