@@ -1,6 +1,6 @@
 .stack {
     background-color: var(--color-light-beige);
-    height: 100vh;
+    min-height: 100vh;
     padding: 5rem;
     display: flex;
     flex-direction: column;
@@ -53,6 +53,44 @@
 .icon:hover {
     cursor: pointer;
     transform: rotate(360deg);
+}
+
+@media screen and (max-width: 1150px) {
+    .stack {
+        padding: 3rem;
+    }
+
+    .stack__wrapper-section {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .stack__title {
+        font-size: 3.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .stack {
+        padding: 2rem;
+    }
+
+    .stack__wrapper-section {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .stack__title {
+        font-size: 3rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .stack__wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 }
 
 
