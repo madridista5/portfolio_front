@@ -22,7 +22,7 @@ export const Contact = () => {
     return (
         <div className="contact" id="contact" style={{backgroundColor: darkMode ? 'var(--color-dark-blue)' : 'var(--color-light-beige)'}}>
             <div className="contact__left-side">
-                <h1 className="contact__left-side_title">Kontakt</h1>
+                <h1 className="contact__left-side_title" style={{textShadow: darkMode ? '0 0 3px var(--color-light-beige)' : ''}}>Kontakt</h1>
                 <div
                     className="contact__left-side_info"
                     style={{color: darkMode ? 'var(--color-light-beige)' : 'var(--color-dark-blue)'}}

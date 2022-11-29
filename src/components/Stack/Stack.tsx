@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import css from '../../assets/css.png';
 import html from '../../assets/html.png';
 import git from  '../../assets/git.png';
@@ -9,17 +9,19 @@ import mongoDB from '../../assets/mongodb.png';
 import mysql from '../../assets/mysql.png';
 import nest from '../../assets/nest.png';
 import node from '../../assets/node.png';
-
+import {ThemeContext} from "../../context/themeContext";
 
 import './Stack.css';
 
 export const Stack = () => {
+    const {darkMode} = useContext(ThemeContext);
+
     return(
-        <div id="stack" className="stack">
-            <h1 className="stack__title">Stack Technologiczny</h1>
+        <div id="stack" className="stack" style={{backgroundColor: darkMode ? 'var(--color-dark-blue)' : 'var(--color-light-beige)'}}>
+            <h1 className="stack__title" style={{textShadow: darkMode ? '0 0 3px var(--color-light-beige)' : ''}}>Stack Technologiczny</h1>
             <div className="stack__wrapper">
-                <div className="stack__wrapper-section">
-                    <h2 className="stack__wrapper-h2">Frontend</h2>
+                <div className="stack__wrapper-section" style={{backgroundColor: darkMode ? 'var(--color-dark-red)' : 'var(--color-beige)', boxShadow: darkMode ? '0 0 3px var(--color-light-beige)' : ''}}>
+                    <h2 className="stack__wrapper-h2" style={{textShadow: darkMode ? '0 0 3px var(--color-light-beige)' : ''}}>Frontend</h2>
                     <div className="stack__wrapper-section_icons">
                         <div className="icon">
                             <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"><img src={css} alt="icon"/></a>
@@ -47,8 +49,8 @@ export const Stack = () => {
                         </div>
                     </div>
                 </div>
-                <div className="stack__wrapper-section">
-                    <h2 className="stack__wrapper-h2">Backend</h2>
+                <div className="stack__wrapper-section" style={{backgroundColor: darkMode ? 'var(--color-dark-red)' : 'var(--color-beige)', boxShadow: darkMode ? '0 0 3px var(--color-light-beige)' : ''}}>
+                    <h2 className="stack__wrapper-h2" style={{textShadow: darkMode ? '0 0 3px var(--color-light-beige)' : ''}}>Backend</h2>
                     <div className="stack__wrapper-section_icons">
                         <div className="icon">
                             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src={js} alt="icon"/></a>
