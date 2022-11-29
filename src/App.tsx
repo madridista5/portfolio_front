@@ -4,6 +4,7 @@ import {ProjectsPreview} from "./components/ProjectsPreview/ProjectsPreview";
 import {Contact} from "./components/Contact/Contact";
 import {Toggle} from "./components/Toggle/Toggle";
 import {ThemeContext} from "./context/themeContext";
+import {Stack} from "./components/Stack/Stack";
 
 import './App.css';
 
@@ -15,6 +16,7 @@ export const App = () => {
             <ThemeContext.Provider value={{darkMode, setDarkMode}}>
                 <Toggle/>
                 <Header/>
+                <Stack/>
                 <ProjectsPreview/>
                 <Contact/>
             </ThemeContext.Provider>
