@@ -5,9 +5,10 @@ import '../ProjectDescription/ProjectDescription.css';
 interface Props {
     title: string,
     img: string[],
+    link: string,
 }
 
-export const ProjectDescImg = ({title, img}: Props) => {
+export const ProjectDescImg = ({title, img, link}: Props) => {
     const [index, setIndex] = useState<number>(0);
 
     const handleArrow = (direction: 'L' | 'R') => {
@@ -28,7 +29,7 @@ export const ProjectDescImg = ({title, img}: Props) => {
                 <div className="arrow arr-right" onClick={() => handleArrow('R')}>→</div>
                 <div className="p-card bg"/>
                 <div className="p-card">
-                    <img src={img[index]} alt="p-img"/>
+                    <a href={link} target="_blank"><img src={img[index]} alt="img" className="p-img"/></a>
                 </div>
             </div>
         </div>
