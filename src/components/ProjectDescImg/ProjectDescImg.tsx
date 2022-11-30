@@ -3,12 +3,12 @@ import React, {useState} from "react";
 import '../ProjectDescription/ProjectDescription.css';
 
 interface Props {
-    title: string,
-    img: string[],
+    imgTitle: string,
+    images: string[],
     link: string,
 }
 
-export const ProjectDescImg = ({title, img, link}: Props) => {
+export const ProjectDescImg = ({imgTitle, images, link}: Props) => {
     const [index, setIndex] = useState<number>(0);
 
     const handleArrow = (direction: 'L' | 'R') => {
@@ -16,20 +16,20 @@ export const ProjectDescImg = ({title, img, link}: Props) => {
             if(index === 0) return;
             setIndex(index => index - 1);
         } else if(direction === 'R') {
-            if(index === img.length-1) return;
+            if(index === images.length-1) return;
             setIndex(index => index + 1);
         }
     }
 
     return (
         <div className="project-desc__img">
-            <h2 className="project-desc__img-h2">{title}</h2>
+            <h2 className="project-desc__img-h2">{imgTitle}</h2>
             <div className="project-desc__img-wrapper">
                 <div className="arrow arr-left" onClick={() => handleArrow('L')}>←</div>
                 <div className="arrow arr-right" onClick={() => handleArrow('R')}>→</div>
                 <div className="p-card bg"/>
                 <div className="p-card">
-                    <a href={link} target="_blank"><img src={img[index]} alt="img" className="p-img"/></a>
+                    <a href={link} target="_blank"><img src={images[index]} alt="img" className="p-img"/></a>
                 </div>
             </div>
         </div>

@@ -1,8 +1,9 @@
 import imgSobitem from '../assets/project_sobitem.png';
 import imgAsianFood from '../assets/project_asian_food.png';
 import imgCarsApp from '../assets/project_cars_app.png';
+import {ProjectsPreviewType} from "../types/projectPreviewType";
 
-export const projectsPreview = [
+export const projectsPreview: ProjectsPreviewType = [
     {
         id: 1,
         img: imgSobitem,

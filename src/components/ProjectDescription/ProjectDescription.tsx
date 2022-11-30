@@ -12,8 +12,8 @@ import './ProjectDescription.css';
 export const ProjectDescription = () => {
     return (
         <div className="project-desc">
-            <ProjectDescImg title="SoBitem" img={[imgSobitem1, imgSobitem2, imgSobitem3, imgSobitem4, imgSobitem5]} link="https://sobitem.tlossy.networkmanager.pl"/>
-            <ProjectDescText/>
+            <ProjectDescImg imgTitle="SoBitem" images={[imgSobitem1, imgSobitem2, imgSobitem3, imgSobitem4, imgSobitem5]} link="https://sobitem.tlossy.networkmanager.pl"/>
+            <ProjectDescText title="Projekt 1: SoBitem" description="opis"/>
         </div>
     );
 }
