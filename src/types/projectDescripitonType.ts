@@ -5,5 +5,3 @@ export interface ProjectDescriptionType {
     title: string;
     description: string;
 }
-
-export type ProjectsDescriptionsType = ProjectDescriptionType[];
