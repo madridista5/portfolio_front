@@ -5,6 +5,7 @@ import {Contact} from "./components/Contact/Contact";
 import {Toggle} from "./components/Toggle/Toggle";
 import {ThemeContext} from "./context/themeContext";
 import {Stack} from "./components/Stack/Stack";
+import {ProjectDescription} from "./components/ProjectDescription/ProjectDescription";
 
 import './App.css';
 
@@ -18,6 +19,7 @@ export const App = () => {
                 <Header/>
                 <Stack/>
                 <ProjectsPreview/>
+                <ProjectDescription/>
                 <Contact/>
             </ThemeContext.Provider>
         </>
