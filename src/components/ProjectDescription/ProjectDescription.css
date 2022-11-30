@@ -1,0 +1,6 @@
+.project-desc {
+    background-color: var(--color-light-beige);
+    min-height: 100vh;
+    padding: 5rem;
+    display: flex;
+}
