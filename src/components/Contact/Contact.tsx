@@ -33,7 +33,7 @@ export const Contact = () => {
                     <a
                         href="https://github.com/madridista5"
                         target="_blank"
-                        style={{color: darkMode ? 'var(--color-light-beige)' : 'var(--color-dark-blue)'}}
+                        style={{color: darkMode ? 'var(--color-light-beige)' : ''}}
                     >
                         <AiFillGithub
                         className="contact__left-side_info-icon"/> madridista5
@@ -43,7 +43,7 @@ export const Contact = () => {
                     <a
                         href="https://www.linkedin.com/in/tymoteusz-lossy/"
                         target="_blank"
-                        style={{color: darkMode ? 'var(--color-light-beige)' : 'var(--color-dark-blue)'}}
+                        style={{color: darkMode ? 'var(--color-light-beige)' : ''}}
                     >
                         <AiFillLinkedin className="contact__left-side_info-icon"/> Tymoteusz Lossy
                     </a>
