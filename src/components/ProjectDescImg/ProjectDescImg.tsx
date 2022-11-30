@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
+import {ThemeContext} from "../../context/themeContext";
 
 import '../ProjectDescription/ProjectDescription.css';
 
@@ -10,6 +11,7 @@ interface Props {
 
 export const ProjectDescImg = ({imgTitle, images, link}: Props) => {
     const [index, setIndex] = useState<number>(0);
+    const {darkMode} = useContext(ThemeContext);
 
     const handleArrow = (direction: 'L' | 'R') => {
         if(direction === 'L') {
@@ -23,7 +25,7 @@ export const ProjectDescImg = ({imgTitle, images, link}: Props) => {
 
     return (
         <div className="project-desc__img">
-            <h2 className="project-desc__img-h2">{imgTitle}</h2>
+            <h2 className="project-desc__img-h2" style={{textShadow: darkMode ? '0 0 3px var(--color-light-beige)' : ''}}>{imgTitle}</h2>
             <div className="project-desc__img-wrapper">
                 <div className="arrow arr-left" onClick={() => handleArrow('L')}>←</div>
                 <div className="arrow arr-right" onClick={() => handleArrow('R')}>→</div>
