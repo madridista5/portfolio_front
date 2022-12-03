@@ -3,6 +3,7 @@ import {Navbar} from "../Navbar/Navbar";
 import {Title} from "../Title/Title";
 import {Arrow} from "../Arrow/Arrow";
 import {ThemeContext} from "../../context/themeContext";
+import bgMobile from '../../assets/bg_mobile.jpg';
 
 import './Header.css';
 
@@ -16,6 +17,9 @@ export const Header = () => {
 
     return (
         <div className="app__header">
+            <div className="app__header-img">
+                <img src={bgMobile} alt="background-mobile"/>
+            </div>
             <div className="app__header-dark-theme" style={{display: darkMode ? 'block' : 'none'}}/>
             <video
                 src={require('../../assets/vid1.mp4')}
