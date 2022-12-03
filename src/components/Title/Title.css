@@ -7,7 +7,7 @@
 }
 
 .app__title h1 {
-    color: var(--color-dark-red)
+    color: var(--color-dark-red);
 }
 
 .app__tilte-info {
@@ -52,5 +52,9 @@
 @media screen and (max-width: 450px) {
     .app__title {
         width: 80%;
+    }
+
+    .app__title h1 {
+        text-shadow: 0 0 3px var(--color-light-beige);
     }
 }
