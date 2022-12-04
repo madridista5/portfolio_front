@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import {Header} from "./components/Header/Header";
+import {ProjectsPreview} from "./components/ProjectsPreview/ProjectsPreview";
+import {Contact} from "./components/Contact/Contact";
+import {Toggle} from "./components/Toggle/Toggle";
+import {ThemeContext} from "./context/themeContext";
+import {Stack} from "./components/Stack/Stack";
+import {ProjectDescription} from "./components/ProjectDescription/ProjectDescription";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App = () => {
+    const [darkMode, setDarkMode] = useState<boolean>(false);
 
-export default App;
+    return (
+        <>
+            <ThemeContext.Provider value={{darkMode, setDarkMode}}>
+                <Toggle/>
+                <Header/>
+                <Stack/>
+                <ProjectsPreview/>
+                <ProjectDescription/>
+                <Contact/>
+            </ThemeContext.Provider>
+        </>
+    );
+}

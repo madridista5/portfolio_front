@@ -1,0 +1,60 @@
+.app__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.app__title h1 {
+    color: var(--color-dark-red);
+}
+
+.app__tilte-info {
+    margin-top: 1.5rem;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--color-white);
+    opacity: 1;
+    animation: description 7s linear;
+}
+
+@keyframes description {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__title {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .app__title {
+        width: 70%;
+    }
+    .app__tilte-info {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .app__title {
+        width: 80%;
+    }
+
+    .app__title h1 {
+        text-shadow: 0 0 3px var(--color-light-beige);
+    }
+}
